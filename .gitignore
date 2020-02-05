@@ -1,0 +1,8 @@
+tests/input
+tests/ref
+tests/output
+work/
+.nextflow.log
+.nextflow.log.*
+.nextflow/
+
