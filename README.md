@@ -8,17 +8,19 @@ See [Nextflow Documentation](https://www.nextflow.io/docs/latest/getstarted.html
 See [Docker Documentation](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ## Get hap.py docker image from Docker Hub
-'''
+
+```
    docker pull pkrusche/hap.py:v0.3.9
-'''
+```
+
 ## Get code
-'''
+```
    git clone https://github.com/oxfordfun/vcfcompare
-'''
+```
 ## Run Test
-'''
+```
    nextflow run compare.nf -profile docker
-'''
+```
 
 ### Change default parameter for your own data:
 
