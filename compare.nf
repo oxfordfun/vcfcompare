@@ -50,7 +50,9 @@ process process_vcf {
 
     label "happy"
 
-    publishDir "${params.output}/", mode: "copy"
+    //errorStrategy 'ignore'
+
+    publishDir "${params.output}/${vcf_file.getBaseName()}/", mode: "copy"
 
     tag {vcf_file.getBaseName()}
 
