@@ -18,7 +18,7 @@ params.output = "tests/output"
 
 vcf_path = params.input + params.pattern
 
-if (params.pattern == "*.vcf.gz"){
+if (params.pattern.endsWith(".gz")){
 
     gzip_files_channel = Channel.fromPath(vcf_path)
 
@@ -38,7 +38,7 @@ if (params.pattern == "*.vcf.gz"){
         }
 }
 
-if (params.pattern == "*.vcf"){
+if (params.pattern.endsWith(".vcf")){
 
    vcf_files_channel = Channel.fromPath(vcf_path)
 }
