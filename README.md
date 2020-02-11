@@ -11,6 +11,7 @@ See [Docker Documentation](https://docs.docker.com/install/linux/docker-ce/ubunt
 
 ```
    docker pull pkrusche/hap.py:v0.3.9
+   singularity build hap.py_v0.3.9.img docker://pkrusche/hap.py:v0.3.9 (if prefer singularity)
 ```
 
 ## Get code
@@ -56,7 +57,7 @@ tests/input/snps-test-2.vcf (two mutations made)
 |SNP|ALL|1321|1320|1|1356|1|0|0|0.999243|0.999263|0.0|0.999253|1.68686868687|1.66404715128|0.0|0.0|
 |SNP|PASS|1321|1320|1|1356|1|0|0|0.999243|0.999263|0.0|0.999253|1.68686868687|1.66404715128|0.0|0.0|
 
-#### snps.vcf vs snps-test-0.vcf
+#### snps.vcf vs snps-test-2.vcf
 |Type|Filter|TRUTH.TOTAL|TRUTH.TP|TRUTH.FN|QUERY.TOTAL|QUERY.FP|QUERY.UNK|FP.gt|METRIC.Recall|METRIC.Precision|METRIC.Frac_NA|METRIC.F1_Score|TRUTH.TOTAL.TiTv_ratio|QUERY.TOTAL.TiTv_ratio|TRUTH.TOTAL.het_hom_ratio|QUERY.TOTAL.het_hom_ratio
 |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 |INDEL|ALL|119|119|0|120|0|0|0|1.0|1.0|0.0|1.0|||0.0|0.0|
