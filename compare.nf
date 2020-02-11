@@ -1,6 +1,12 @@
 #! /usr/bin/env nextflow
 /*
-nextflow run compare.nf --input /home/docker/Data/vcfs_tests --pattern *.vcf --output /home/docker/Data/vcfs_tests_output
+nextflow run compare.nf -profile docker (use all default parameters)
+nextflow run compare.nf -profile docker \
+--ref /data/test_suite/reference/ref.fa \
+--refindex /data/test_suite/reference/ref.fa.fai \
+--refvcf /data/test_suite/truth_set.vcf \
+--input /data/test_suite/vcfs/all/ \
+--pattern *.vcf 
 */
 
 params.ref = "tests/ref/NC_000962.fasta"
