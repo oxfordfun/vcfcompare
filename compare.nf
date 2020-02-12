@@ -72,6 +72,6 @@ process process_vcf {
     set val("${vcf_file.getBaseName()}"), file("${vcf_file.getBaseName()}.*") 
 
     """
-    /opt/hap.py/bin/hap.py -r ${ref} ${refvcf} ${vcf_file} -o ${vcf_file.getBaseName()}
+    /opt/hap.py/bin/hap.py --preprocess-truth --engine=vcfeval -r ${ref} ${refvcf} ${vcf_file} -o ${vcf_file.getBaseName()}
     """
 }
