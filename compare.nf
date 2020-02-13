@@ -9,10 +9,10 @@ nextflow run compare.nf -profile docker \
 --pattern *.vcf 
 */
 
-params.ref = "tests/ref/NC_000962.fasta"
+params.ref = "tests/ref/NC_000962_3.fasta"
 ref = file(params.ref)
 
-params.refindex = "tests/ref/NC_000962.fasta.fai"
+params.refindex = "tests/ref/NC_000962_3.fasta.fai"
 refindex = file(params.refindex)
 
 params.refvcf = "tests/ref/snps.vcf"
@@ -36,7 +36,7 @@ if (params.pattern.endsWith(".gz")){
             file gzip_file from gzip_files_channel
 
         output:
-            set file("${gzip_file.getBaseName()}.vcf") into vcf_files_channel
+            file("${gzip_file.getBaseName()}.vcf") into vcf_files_channel
 
         """
             gunzip -c ${gzip_file} > ${gzip_file.getBaseName()}.vcf
